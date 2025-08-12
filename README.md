@@ -1,4 +1,4 @@
-# Agentic AI Query System
+# Self Correcting NLQ to Query using Agentic AI
 
 ## Overview
 This project implements an agentic AI system that can process natural language queries and generate appropriate SQL and Cypher queries for database interactions. The system uses LangGraph to create a workflow that validates, regenerates, and executes queries against both PostgreSQL and Neo4j databases.
@@ -29,6 +29,25 @@ The system uses a state-based graph architecture with the following components:
 ```
 pip install langchain langchain_groq langgraph neo4j psycopg2 pydantic
 ```
+4. Download Ollama from here: [https://ollama.com/]
+5. Pull the following models from Command Prompt:
+```
+ollama pull tomasonjo/llama3-text2cypher-demo
+ollama pull sqlcoder:7b
+```
+6.  Run the models and test them using:
+```
+ollama run tomasonjo/llama3-text2cypher-demo
+ollama run sqlcoder:7b
+```
+7. Create an API key from GROQ: [https://groq.com/]
+
+## Execution:
+1. Execute either using IPYNB.
+2. Execute either using Stream lit app.
+```
+streamlit run app.py
+```
 
 ## Usage
 1. Initialize the graph with your query
@@ -49,9 +68,3 @@ result = app.invoke({
 sql_results = result["sql_ans"]
 cypher_results = result["cypher_ans"]
 ```
-
-## License
-[Your License Here]
-
-## Contributors
-[Your Name Here]
