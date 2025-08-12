@@ -16,6 +16,8 @@ The system uses a state-based graph architecture with the following components:
 - Query regeneration nodes for invalid queries
 - Database execution nodes for retrieving results
 
+<img width="458" height="531" alt="output" src="https://github.com/user-attachments/assets/167e532a-7a56-4207-88d1-5bc2b32f3b88" />
+
 ## Dependencies
 - LangChain and LangGraph for workflow orchestration
 - ChatGroq and ChatOllama for LLM interactions
